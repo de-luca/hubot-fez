@@ -1,0 +1,39 @@
+{
+  "name": "hubot-fez",
+  "description": "A fez translator for Slack",
+  "version": "1.0.0",
+  "author": "Bastien de Luca <dev@de-luca.io>",
+  "license": "BSD2",
+
+  "keywords": [
+    "hubot",
+    "hubot-scripts",
+    "fez"
+  ],
+
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/de-luca/hubot-fez.git"
+  },
+
+  "bugs": {
+    "url": "https://github.com/de-luca/hubot-fez/issues"
+  },
+
+  "dependencies": {
+    "coffee-script": "~1.6"
+  },
+
+  "devDependencies": {
+    "mocha": "*",
+    "chai": "*",
+    "sinon-chai": "*",
+    "sinon": "*"
+  },
+
+  "main": "index.coffee",
+
+  "scripts": {
+    "test": "script/test"
+  }
+}
