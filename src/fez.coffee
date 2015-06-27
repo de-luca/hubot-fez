@@ -14,14 +14,17 @@
 # Author:
 #   Bastien de Luca <dev@de-luca.io>
 
+alpha = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+
 module.exports = (robot) ->
 
     robot.respond /fez (.*)/i, (msg) ->
-        raw = msg.match[1]
+        raw = msg.match[1].toLowerCase()
         fez = ""
         for i in [0..raw.length-1]
             unless raw[i] == " "
-                fez += ":fez-#{raw[i]}:"
+                if raw[i] in alpha
+                    fez += ":fez-#{raw[i]}: "
             else
-                fez += raw[i]
+                fez += "  "
         msg.send fez
